@@ -1,5 +1,5 @@
 {
-  "name": "Wild Dev Blog",
+  "name": "wild-dev",
   "private": true,
   "description": "Le blog d'une développeuse en herbe",
   "version": "0.1.0",
@@ -9,6 +9,7 @@
     "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.85",
+    "gatsby-cli": "^2.12.113",
     "gatsby-image": "^2.4.21",
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-manifest": "^2.4.35",

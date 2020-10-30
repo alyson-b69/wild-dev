@@ -67,6 +67,7 @@ const Article = props => {
         title={article.title}
         description={article.excerpt + "..."}
         image={article.image.publicURL}
+        article
       />
 
       <div className="wrapper">
@@ -117,11 +118,13 @@ const Article = props => {
           source={article.content}
           renderers={{ code: CodeBlock, inlineCode: InlineCode }}
         />
-        <Share socialConfig={config} tags={article.tags} />
+        <Share
+          socialConfig={config}
+          tags={article.tags.map(tag => tag.name.replace(/\s/g, "").toString())}
+        />
       </div>
     </Layout>
   )
 }
 
 export default Article
-

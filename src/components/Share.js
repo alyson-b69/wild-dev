@@ -19,19 +19,17 @@ import "../assets/styles/Share.scss"
 
 const Share = props => {
   const socialConfig = props.socialConfig
-  const tag = props.tags.map(tag => tag.name.replace(/\s/g, "").toString())
-  const urlImage = "http://wild-dev.com/"+socialConfig.config.image
+  const tag = props.tags
+  const urlImage = "http://wild-dev.com/" + socialConfig.config.image
   const url = socialConfig.config.url.toString()
-  const title = socialConfig.config.title
+  const title = socialConfig.config.title.toString()
   const summary = socialConfig.config.description
+  console.log(title)
+  console.log(url)
+
   return (
     <div className="post-social">
-      <FacebookShareButton
-        url={url}
-        className="button facebook"
-	image={urlImage}
-	quote={title}
-      >
+      <FacebookShareButton url={url} className="button facebook">
         <span className="icon">
           <FaFacebookF />
         </span>
@@ -50,7 +48,7 @@ const Share = props => {
       <LinkedinShareButton
         url={url}
         source={url}
-	title={title}
+        title={title}
         summary={socialConfig.config.description}
         className="button linkedin"
       >
@@ -59,12 +57,7 @@ const Share = props => {
         </span>
       </LinkedinShareButton>
 
-
-      <RedditShareButton
-        url={url}
-        title={title}
-	className="button reddit"
-      >
+      <RedditShareButton url={url} title={title} className="button reddit">
         <span className="icon">
           <FaRedditAlien />
         </span>
@@ -98,4 +91,3 @@ Share.defaultProps = {
 }
 
 export default Share
-

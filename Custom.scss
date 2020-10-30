@@ -1,17 +1,15 @@
 /* The following line can be included in a src/App.scss */
 @import "~bootstrap/scss/bootstrap";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 body {
   font-family: Roboto;
   background: #f7f8f8;
   cursor: default;
-  max-width:100vw;
+  max-width: 100vw;
 }
 
-$color-orange: #ff8c00;
-$color-pink: #fb095c;
+$color-orange: #ff6b00;
+$color-pink: #de1051;
 
 a,
 .btn,
@@ -38,13 +36,13 @@ h2 span {
 
 .btn {
   background: #fff;
-  border: solid 1px $color-pink;
-  color: $color-pink;
+  border: solid 1px $color-orange;
+  color: $color-orange;
 }
 
 .btn:hover {
-  background: $color-pink;
-  border: solid 1px $color-pink;
+  background: $color-orange;
+  border: solid 1px $color-orange;
   color: #fff;
 }
 
@@ -123,17 +121,27 @@ h2 span {
   }
 }
 
-.footer-category a {
-  color: $color-pink;
-}
-
-.footer-category a:hover {
-  color: $color-orange;
-}
-
 .card-img-top {
   border-top-left-radius: calc(10px - 1px);
   border-top-right-radius: calc(10px - 1px);
+}
+
+.card-body a .h3.card-title.h5 {
+  color: #000;
+  transition: all 0.4s ease-in-out;
+}
+
+.card-body a:hover .h3.card-title.h5 {
+  color: $color-orange;
+}
+
+.card-text {
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.article-link {
+  text-align: center;
 }
 
 .card-footer:last-child {
@@ -145,13 +153,12 @@ h2 span {
   display: flex;
 }
 
-.card-text {
-  text-align: justify;
-  font-size: 0.9em;
+.footer-category a {
+  color: $color-pink;
 }
 
-.article-link {
-  text-align: center;
+.footer-category a:hover {
+  color: $color-orange;
 }
 
 /* PAGINATION */
@@ -207,4 +214,3 @@ footer {
   -moz-box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.5);
 }
-
