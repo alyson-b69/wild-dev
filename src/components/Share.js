@@ -24,8 +24,6 @@ const Share = props => {
   const url = socialConfig.config.url.toString()
   const title = socialConfig.config.title.toString()
   const summary = socialConfig.config.description
-  console.log(title)
-  console.log(url)
 
   return (
     <div className="post-social">

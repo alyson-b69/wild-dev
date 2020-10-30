@@ -12,6 +12,7 @@ import { IoMdPricetag } from "react-icons/io"
 
 import Layout from "../components/layout"
 import Share from "../components/Share"
+import SEO from "../components/seo"
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
@@ -55,19 +56,19 @@ const Article = props => {
     config: {
       url: `${site.url}/article/${article.slug}`,
       title: article.title,
-      description: `${article.excerpt} ...`,
+      description: article.excerpt + "...",
       image: article.image.publicURL,
     },
   }
 
-  const seo = {
-    title: article.title,
-    description: `${article.excerpt} ...`,
-    image: article.image.publicURL,
-  }
-
   return (
-    <Layout key={`single_article_${article.id}`} SEO={(seo, article)}>
+    <Layout key={`single_article_${article.id}`}>
+      <SEO
+        title={article.title}
+        description={article.excerpt + "..."}
+        image={article.image.publicURL}
+        article
+      />
       <div className="wrapper">
         <h1>{article.title}</h1>
         <div className="article-meta">
