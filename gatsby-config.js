@@ -2,7 +2,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-
 module.exports = {
   siteMetadata: {
     title: `WILD DEV BLOG`,
@@ -10,7 +9,7 @@ module.exports = {
     description:
       "Wild Dev : Des tutoriels Gatsby, Strapi, ReactJS, JavaScript, des ressources web, des tips, astuces, et conseils concernant le développement web.",
     author: "wild dev",
-    url: `http://www.wild-dev.com`,
+    url: `https://www.wild-dev.com`,
     image: "",
     twitterUsername: `@WildDev69`,
   },
