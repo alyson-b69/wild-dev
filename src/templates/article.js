@@ -11,7 +11,6 @@ import { RiTimeLine } from "react-icons/ri"
 import { IoMdPricetag } from "react-icons/io"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Share from "../components/Share"
 
 export const query = graphql`
@@ -61,15 +60,14 @@ const Article = props => {
     },
   }
 
-  return (
-    <Layout key={`single_article_${article.id}`}>
-      <SEO
-        title={article.title}
-        description={article.excerpt + "..."}
-        image={article.image.publicURL}
-        article
-      />
+  const seo = {
+    title: article.title,
+    description: `${article.excerpt} ...`,
+    image: article.image.publicURL,
+  }
 
+  return (
+    <Layout key={`single_article_${article.id}`} SEO={(seo, article)}>
       <div className="wrapper">
         <h1>{article.title}</h1>
         <div className="article-meta">

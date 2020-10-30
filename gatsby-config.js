@@ -9,7 +9,7 @@ module.exports = {
     description:
       "Wild Dev : Des tutoriels Gatsby, Strapi, ReactJS, JavaScript, des ressources web, des tips, astuces, et conseils concernant le développement web.",
     author: "wild dev",
-    url: `https://www.wild-dev.com`,
+    url: `https://wild-dev.com`,
     image: "",
     twitterUsername: `@WildDev69`,
   },
