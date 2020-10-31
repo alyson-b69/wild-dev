@@ -1,18 +1,22 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import Layout from "../components/layout"
 import ArticlesComponent from "../components/Articles"
 
 const Search = props => {
   const articles = props.pageContext.articles
-  const querySearch = window.location.search.split("=")[1]
+  const [querySearch, setQuerySearch] = useState("")
+
+  useEffect(() => {
+    setQuerySearch(window.location.search.split("=")[1])
+  }, [props])
 
   const seo = {
     title: `Tous les articles du blog Wild Dev`,
     description: `Des tutoriels Gatsby, Strapi, ReactJS, JavaScript, des ressources web, des tips, astuces, et conseils concernant le développement web.`,
   }
 
-  const filteredArticles = articles.filter(article => {
+  let filteredArticles = articles.filter(article => {
     const { content } = article.node
     return content.toLowerCase().includes(querySearch.toLowerCase())
   })
