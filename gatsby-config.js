@@ -4,10 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `WILD DEV BLOG`,
-    titleTemplate: `%s · By Wild Dev  `,
+    title: `WILD <DEV/>`,
+    titleTemplate: `%s · By Wild <Dev/>  `,
     description:
-      "Wild Dev : Des tutoriels Gatsby, Strapi, ReactJS, JavaScript, des ressources web, des tips, astuces, et conseils concernant le développement web.",
+      "Wild <Dev/> : Des tutoriels Gatsby, Strapi, ReactJS, JavaScript, des ressources web, des tips, astuces, et conseils concernant le développement web.",
     author: "wild dev",
     url: `https://wild-dev.com`,
     image: "",

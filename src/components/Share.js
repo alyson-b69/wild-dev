@@ -47,7 +47,7 @@ const Share = props => {
         url={url}
         source={url}
         title={title}
-        summary={socialConfig.config.description}
+        summary={summary}
         className="button linkedin"
       >
         <span className="icon">
