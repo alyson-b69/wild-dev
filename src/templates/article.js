@@ -67,6 +67,7 @@ const Article = props => {
         title={article.title}
         description={article.excerpt + "..."}
         image={article.image.publicURL}
+        updated_time={article.updated_at}
         article
       />
       <div className="wrapper">
