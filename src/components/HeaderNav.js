@@ -1,8 +1,21 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React, { useState } from "react"
+import { StaticQuery, graphql, navigate } from "gatsby"
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
 
-const HeaderNav = () => {
+const HeaderNav = props => {
+  const [querySearch, setQuerySearch] = useState("")
+
+  const handleInputSearch = e => {
+    e.preventDefault()
+    setQuerySearch(e.target.value)
+  }
+
+  const handleSearchSubmit = e => {
+    e.preventDefault()
+    navigate(`/search?word=${querySearch}`)
+    setQuerySearch("")
+  }
+
   return (
     <Navbar bg="light" variant="light" expand="lg" fixed="top">
       <Navbar.Brand className="extra-bold" href="/">
@@ -39,9 +52,15 @@ const HeaderNav = () => {
             }
           />
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button>Search</Button>
+        <Form inline onSubmit={handleSearchSubmit}>
+          <FormControl
+            type="text"
+            placeholder="Search"
+            value={querySearch}
+            className="mr-sm-2"
+            onChange={handleInputSearch}
+          />
+          <Button type="submit">Search</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>

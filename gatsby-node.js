@@ -99,12 +99,21 @@ exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = 6
 
   createPaginatedPages({
-    edges: result.data.articles.edges,
+    edges: articles,
     createPage: createPage,
     pageTemplate: "src/templates/index.js",
     pageLength: postsPerPage,
     pathPrefix: "",
     context: {},
+  })
+
+  //Create page for searching post
+  createPage({
+    path: `/search`,
+    component: require.resolve("./src/templates/search.js"),
+    context: {
+      articles: articles,
+    },
   })
 
   // Creating page index of categories
@@ -172,4 +181,3 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
-
