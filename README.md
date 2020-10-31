@@ -37,4 +37,6 @@
 
 ## 💫 Deploiement / Deployment
 
--[x] Deploiement sur mon VPS OVH / Deployment on my OVH VPS -[x] Installation certification SSL / SSL certification installation -[ ] Autorun de gatsby et de strapi pour mise à jour en temps réel / Gatsby and strapi autorun for real time update
+- [x] Deploiement sur mon VPS OVH / Deployment on my OVH VPS
+- [x] Installation certification SSL / SSL certification installation
+- [ ] Autorun de gatsby et de strapi pour mise à jour en temps réel / Gatsby and strapi autorun for real time update
