@@ -5,16 +5,8 @@ import { RiTimeLine } from "react-icons/ri"
 import { IoMdPricetag } from "react-icons/io"
 
 const ArticleCard = ({ article }) => {
-  const seo = {
-    metaTitle: article.node.title,
-    metaDescription: article.node.content,
-  }
   return (
-    <Card
-      seo={seo}
-      className="h-100"
-      key={`article_card_${article.node.strapiId}`}
-    >
+    <Card className="h-100" key={`article_card_${article.node.strapiId}`}>
       <a href={`/article/${article.node.slug}`}>
         <Card.Img
           variant="top"
@@ -58,4 +50,3 @@ const ArticleCard = ({ article }) => {
 }
 
 export default ArticleCard
-
