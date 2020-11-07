@@ -95,6 +95,11 @@ form.search {
   }
 }
 
+.search input[type="text"]:focus {
+  box-shadow: 0px 0px 1px 1px $color-orange;
+  border-color: $color-orange;
+}
+
 .search button[type="submit"] {
   position: absolute;
   right: 0;
@@ -105,6 +110,10 @@ form.search {
   @include media-breakpoint-down(sm) {
     right: 16px;
   }
+}
+
+button.navbar-toggler:focus {
+  outline-color: $color-orange;
 }
 
 /* MAIN CONTENT */
