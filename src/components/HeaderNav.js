@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { StaticQuery, graphql, navigate } from "gatsby"
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
+import { FaSearch } from "react-icons/fa"
 
 const HeaderNav = props => {
   const [querySearch, setQuerySearch] = useState("")
@@ -52,7 +53,7 @@ const HeaderNav = props => {
             }
           />
         </Nav>
-        <Form inline onSubmit={handleSearchSubmit}>
+        <Form inline onSubmit={handleSearchSubmit} className="search">
           <FormControl
             type="text"
             placeholder="Search"
@@ -60,7 +61,9 @@ const HeaderNav = props => {
             className="mr-sm-2"
             onChange={handleInputSearch}
           />
-          <Button type="submit">Search</Button>
+          <Button type="submit">
+            <FaSearch />
+          </Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>
