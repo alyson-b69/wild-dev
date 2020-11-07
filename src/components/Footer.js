@@ -22,7 +22,7 @@ const Footer = () => {
           </a>{" "}
           - Made with love by{" "}
           <a
-            href="https://www.alyson-b.netlify.app"
+            href="https://alyson-b.netlify.app"
             title="Site CV Alyson Bernabeu developppeuse / developppeur web"
             target="_blank"
             rel="noopener noreferrer"
@@ -35,4 +35,3 @@ const Footer = () => {
   )
 }
 export default Footer
-
